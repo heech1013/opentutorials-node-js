@@ -1,0 +1,10 @@
+extends ./layout
+block content
+    form(action='/auth/login', method='post')
+        p
+            input(type='text', name='username', placeholder='아이디')
+        p
+            input(type='text', name='password', placeholder='비밀번호')
+        p
+            input(type='submit')
+        a(href='/auth/facebook') 페이스북 간편 로그인

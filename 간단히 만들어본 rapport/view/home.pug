@@ -1,0 +1,32 @@
+doctype html
+html
+    head
+    body
+        h1 안녕하세요! #{req.user.displayName}님!
+        a(href="/rapport/logout") 로그아웃 
+        div
+            form(action="/rapport/result" method='post')
+                    p
+                        |지역: 
+                        select(name="place")
+                                option(value="0") 강북구
+                                option(value="1") 송파구
+                                option(value="2") 용산구
+                                option(value="3") 동작구
+                    p 
+                        |비용: 
+                        select(name="price")
+                                option(value="0") 무료
+                                option(value="1") 유료
+                    p
+                        |분야:
+                        label
+                                input(type="checkbox" name="field" value="01")
+                                |우울
+                        label
+                                input(type="checkbox" name="field" value="02")
+                                |불안
+                        label
+                                input(type="checkbox" name="field" value="03")
+                                |강박
+                    input(type="submit")

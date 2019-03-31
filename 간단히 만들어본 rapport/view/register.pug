@@ -1,0 +1,19 @@
+doctype html
+html
+head
+    meta(charset=utf8)
+body
+
+h1 회원가입
+    form(action='/rapport/register', method='post')
+      p
+      h6 아이디: 
+        input(type='text', name='username', placeholder='아이디')
+      p
+      h6 비밀번호: 
+        input(type='password', name='password', placeholder='비밀번호')
+      p
+      h6 닉네임: 
+        input(type='text', name='displayName', placeholder='닉네임')
+      p
+        input(type='submit')

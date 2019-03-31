@@ -1,0 +1,19 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+    body
+        h1 검색결과
+        ul
+            each center in results
+                li
+                    h2=center.name
+                    h5 전화번호: 
+                    =center.phoneNumber
+                    h5 홈페이지: 
+                    =center.page
+                    h5 자격증: 
+                    =center.certification
+                    h5 특이사항: 
+                    =center.description
+        a(href='/rapport/home') 검색하기

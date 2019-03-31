@@ -1,0 +1,18 @@
+extends ./layout
+block content
+    article
+        if (row_in)
+            h2=row_in.title
+            =row_in.description
+            div= 'by'+row_in.author
+        else
+            h2 환영합니다!
+            | 라포(Rapport)입니다.
+    ul
+        li
+          a(href='/home/add') 새로운 게시물 작성
+        if (row_in)
+          li
+            a(href='/home/'+row_in.id+'/edit') 수정
+          li
+            a(href='/home/'+row_in.id+'/delete') 삭제

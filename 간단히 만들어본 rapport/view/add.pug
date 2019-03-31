@@ -1,0 +1,51 @@
+doctype html
+html
+    head
+    body
+
+        h1 관리자용 기관 등록 페이지
+        div
+                form(action="/rapport/add" method='post')
+                    p
+                        h5 기관 id: 
+                        input(name="id" type="text")
+                    p
+                        h5 기관 명: 
+                        input(name="name" type="text")
+                    p
+                        h5 전화번호: 
+                        input(name="phoneNumber" type="text")
+                    p
+                        h5 홈페이지 링크: 
+                        input(name="page" type="text")
+                    p
+                        h5 자격증 목록: 
+                        textarea(name="certification") 자격증 목록
+                    p
+                        h5 특징: 
+                        textarea(name="description") 특징
+                    p
+                        |지역: 
+                        select(name="place")
+                                option(value="0") 강북구
+                                option(value="1") 송파구
+                                option(value="2") 용산구
+                                option(value="3") 동작구
+                    p 
+                        |비용: 
+                        select(name="price")
+                                option(value="0") 무료
+                                option(value="1") 유료
+                    p
+                        |분야:
+                        label
+                                input(type="checkbox" name="field" value="01")
+                                |우울
+                        label
+                                input(type="checkbox" name="field" value="02")
+                                |불안
+                        label
+                                input(type="checkbox" name="field" value="03")
+                                |강박
+                    input(type="submit")
+    a(href='/rapport/login') 로그인
